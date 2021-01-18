@@ -18,9 +18,12 @@ public class GlobalFunctions {
         return LocalDate.parse(fecha);
 	}
 	
-	  public static float calcularPrecio(PedidoDetalle pedido) {
-	        return pedido.getPrecioUnitario() * pedido.getCantidad();
-	    }
+	public static LocalDate stringDateToLocal(String fecha) {
+		return LocalDate.parse(fecha);
+	}
 	
-	
+	public static float calcularPrecio(PedidoDetalle pedido) {
+		return pedido.getPrecioUnitario() * pedido.getCantidad();
+	}
+		
 }

@@ -20,8 +20,9 @@ import com.ma.pedidos.utils.response.ResponseError;
  * 
  * @author matid
  * Esta clase abstracta debe ser extendida por todos los controller que realicen un CRUD
- * y deben implementar los metodos getService() y getLogger()
- *
+ * para centralizar las acciones.
+ * El metodo getService() debe ser implementado para devolver el service que maneja este CRUD.
+ * 
  * @param <T> Este parametro es el que indica el objeto que maneja este CRUD
  * @param <K> Este parametro es el que indica el tipo de key del objeto de este CRUD
  */

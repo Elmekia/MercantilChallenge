@@ -55,8 +55,8 @@ public class PedidoService implements IPedidoService {
 
 	@Override
 	public List<PedidoResponseDTO> findByFecha(String fecha) {
-		LocalDate fechaPedido = LocalDate.parse(fecha);
-		List<PedidoCabecera> pedidos = this.pedidoDAO.findByFecha(fechaPedido); //get(fecha);
+		LocalDate fechaPedido = GlobalFunctions.stringDateToLocal(fecha);
+		List<PedidoCabecera> pedidos = this.pedidoDAO.findByFecha(fechaPedido);
 		List<PedidoResponseDTO> pedidosResponse = new ArrayList<>();
 		pedidos.forEach(pedido -> {
 			pedidosResponse.add(new PedidoResponseDTO(pedido));
